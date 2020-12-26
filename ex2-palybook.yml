@@ -1,0 +1,14 @@
+-
+  name: playbook to use a file module
+  hosts: demo
+  become: yes
+  tasks:
+    - name: code to create a file at a specified loaction
+      file:
+        path: /opt/myfile
+        state: touch
+
+    - name: below code to create a directory at specified loaction
+      file:
+        path: /opt/akshay
+        state: directory

@@ -1,0 +1,9 @@
+-
+  name: Playbook to install git
+  host: localhost
+  become: yes
+  tasks:
+    - name: Code to install git package
+      yum:
+        name: git
+        state: present

@@ -1,0 +1,22 @@
+-
+  name: playbook to use standard loops
+  hosts: demo
+  become: yes
+  tasks:
+    - name: Code to add multiple users
+      user:
+        name: "{{ item }}"
+        state: present
+        groups: "wheel"
+      with_items:
+        - testuser6
+        - testuser7
+
+    - name: Code to add multiple users
+      user:
+        name: "{{ item }}"
+        state: present
+        groups: "wheel"
+      loop:
+        - testuser8
+        - testuser9

@@ -1,0 +1,15 @@
+-
+  name: Code using command module to complete the given assignment
+  hosts: demo
+  become: yes
+  tasks:
+    - name: below code for making directory 
+      command: mkdir /opt/africa
+
+
+    - name: below code to create  a file
+      command: touch /opt/africa/india.txt
+
+
+    - name: below code to add content to the file
+      command: echo "HELLO WORLD" > /opt/africa/india.txt

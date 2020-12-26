@@ -1,0 +1,10 @@
+-
+   name: playbook to launch ec2 instance
+   host: localhost
+   become: yes
+   tasks:
+    - name: Code to launch ec2 instance
+      ec2:
+        instance_type: t2.micro
+        image: ami-0a0ad6b70e61be944
+        region: us-east-2

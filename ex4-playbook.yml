@@ -1,0 +1,7 @@
+-
+  name: code to create multiple directories
+  hosts: demo
+  become: yes
+  tasks:
+    - name: code to implement multiple directories
+      command: mkdir -p A/B/C

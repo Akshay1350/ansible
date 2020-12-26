@@ -1,0 +1,19 @@
+-
+  name: Code to implement vars section in playbook
+  hosts: demo
+  become: yes
+  vars:
+    a: 10
+    b: 20
+    c: "India is great"
+  tasks:
+    - name: code to create a file
+      file:
+        path: /tmp/sukriti.txt
+        state: touch
+
+    - name: code to access variable values inside a file
+      lineinfile:
+        path: /tmp/sukriti.txt
+        state: present
+        line: "The value of A is: {{a}} and the value of B is: {{b}} and the valuue of c is: {{c}}"

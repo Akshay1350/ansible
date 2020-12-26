@@ -1,0 +1,22 @@
+-
+  name: Code to make a directory followed by a file with content "Hello World"
+  hosts: demo
+  become: yes
+  tasks:
+    - name: code to create a directory
+      command: mkdir asia
+
+    - name: code to create a file in the above created directory
+      command: touch asia/india.txt
+
+
+    - name: code to write some content inside the above created file
+      lineinfile: 
+          path: asia/india.txt
+          line: hello world
+
+    - name: code to change permissons of the file
+      file:
+        path: asia/india.txt
+        state: touch
+        mode: u=rw,g=r,o-rwx

@@ -1,0 +1,10 @@
+-
+  name: Code using command module to complete the given assignment
+  hosts: demo
+  become: yes
+  tasks:
+    - name: below code for making directory 
+      command: mkdir /opt/europe
+
+    - name: below code to creeat a file
+      command: touch /opt/eue

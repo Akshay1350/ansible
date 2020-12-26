@@ -1,0 +1,9 @@
+-
+  name: playbook to install multiple packages at once
+  hosts: demo
+  become: yes
+  tasks:
+    - name: Code to install packages
+      yum:
+        name: ['git','finger','docker','httpd','net-tools']
+        state: present

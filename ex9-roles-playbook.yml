@@ -1,0 +1,6 @@
+---
+  - import_playbook: /home/ansible/ansible-project/ex1-palybook.com
+
+  - import_playbook: /home/ansible/ansible-project/ex2-palybook.yml
+
+
